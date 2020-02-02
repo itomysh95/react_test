@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItem with fixture data 1`] = `
+<div>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    exact={true}
+    to="/edit/1"
+  >
+    <h3>
+      Gum
+    </h3>
+  </NavLink>
+  <p>
+    $1.95
+    -
+    December 31st, 1969
+  </p>
+</div>
+`;

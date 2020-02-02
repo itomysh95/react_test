@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css'
+
 
 export default class ExpenseForm extends React.Component{
     constructor(props){
@@ -17,7 +17,7 @@ export default class ExpenseForm extends React.Component{
             // either take the current moment ( creating a new expense)
             // or take the moment of the original create time( edit expense)
             createdAt: props.expense?moment(props.expense.createdAt):moment(),
-            calenderFocusued: false,
+            calenderFocused: false,
             error: ''
         }
     }
@@ -53,7 +53,7 @@ export default class ExpenseForm extends React.Component{
         // if there is a value then we change it, if there is no
         // value in createdAt we leave the current date as is
         if(this.state.createdAt){
-            this.setState(()=>({calenderFocusued:focused}))
+            this.setState(()=>({calenderFocused:focused}))
         }
     }
 
@@ -101,7 +101,7 @@ export default class ExpenseForm extends React.Component{
                     <SingleDatePicker 
                      date={this.state.createdAt}
                      onDateChange={this.onDateChange}
-                     focused={this.state.calenderFocusued}
+                     focused={this.state.calenderFocused}
                      onFocusChange={this.onFocusChange}
                      numberOfMonths={1}
                      isOutsideRange={()=> false}

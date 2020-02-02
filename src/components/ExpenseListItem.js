@@ -13,13 +13,12 @@ const ExpenseListItem=({id,description,amount,createdAt})=>(
         </h3>
        </NavLink>
        <p>
-       {numeral(amount/100).format('$0,0.00')}
-       -
-       {moment(createdAt).format('MMMM Do, YYYY')}
+        {numeral(amount/100).format('$0,0.00')}
+        - 
+        {moment(createdAt).format('MMMM Do, YYYY')}
        </p>
     </div>
 )
 
 
-// gives access to dispatch 
-export default connect()(ExpenseListItem);
+export default ExpenseListItem
